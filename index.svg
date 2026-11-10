@@ -1,0 +1,382 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="background:#0a0a0a">
+<title>Math Notes</title>
+<foreignObject x="0" y="0" width="100%" height="100%">
+<iframe xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;border:0;display:block" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta content=&quot;width=device-width, initial-scale=1.0&quot; name=&quot;viewport&quot;&gt;
+  &lt;title&gt;Noahs Tutoring | Math&lt;/title&gt;
+  &lt;link href=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/cuh.png&quot; id=&quot;siteFavicon&quot; rel=&quot;icon&quot; type=&quot;image/x-icon&quot;&gt;
+  &lt;link href=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/cuh.png&quot; rel=&quot;shortcut icon&quot;&gt;
+  &lt;link href=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/cuh.png&quot; rel=&quot;apple-touch-icon&quot;&gt;
+  &lt;meta content=&quot;#c27c15&quot; name=&quot;theme-color&quot;&gt;
+  &lt;meta content=&quot;Noah's Tutoring Hub&quot; property=&quot;og:site_name&quot;&gt;
+  &lt;meta content=&quot;Noah's Tutoring Hub | 400+ Unblocked Games &amp; Lessons&quot; property=&quot;og:title&quot;&gt;
+  &lt;meta
+    content=&quot;Access hundreds of unblocked games, educational tools, and math lessons. The ultimate hub for students!&quot;
+    property=&quot;og:description&quot;&gt;
+  &lt;meta content=&quot;https://noahs-calculus-tutor.pages.dev/&quot; property=&quot;og:url&quot;&gt;
+  &lt;meta content=&quot;website&quot; property=&quot;og:type&quot;&gt;
+  &lt;meta
+    content=&quot;https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/refs/heads/master/images/OG%20noahstutoring.png&quot;
+    property=&quot;og:image&quot;&gt;
+  &lt;meta content=&quot;1200&quot; property=&quot;og:image:width&quot;&gt;
+  &lt;meta content=&quot;630&quot; property=&quot;og:image:height&quot;&gt;
+  &lt;meta content=&quot;Noah's Tutoring Hub - Unblocked Games &amp; Educational Resources&quot; property=&quot;og:image:alt&quot;&gt;
+  &lt;meta content=&quot;en_US&quot; property=&quot;og:locale&quot;&gt;
+  &lt;meta content=&quot;summary_large_image&quot; name=&quot;twitter:card&quot;&gt;
+  &lt;meta content=&quot;Noah's Tutoring Hub | 400+ Unblocked Games&quot; name=&quot;twitter:title&quot;&gt;
+  &lt;meta content=&quot;The best collection of unblocked games and educational resources for students.&quot;
+    name=&quot;twitter:description&quot;&gt;
+  &lt;meta
+    content=&quot;https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/refs/heads/master/images/OG%20noahstutoring.png&quot;
+    name=&quot;twitter:image&quot;&gt;
+  &lt;meta content=&quot;Noah's Tutoring Hub Banner&quot; name=&quot;twitter:image:alt&quot;&gt;
+  &lt;meta
+    content=&quot;Noah's Tutoring Hub - Access hundreds of unblocked games, math lessons, and educational resources. Perfect for students looking for fun learning tools.&quot;
+    name=&quot;description&quot;&gt;
+  &lt;meta content=&quot;unblocked games, tutoring, math help, educational games, student resources, online learning&quot;
+    name=&quot;keywords&quot;&gt;
+  &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/css/style.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;style&gt;
+    .popup-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; display: none; align-items: center; justify-content: center; font-family: 'Courier New', monospace; }
+    .popup-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); animation: fadeIn 0.3s ease; }
+    .popup-container { position: relative; width: min(450px, 90%); z-index: 100000; animation: popupSlideIn 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.2); }
+    .popup-content { background: linear-gradient(145deg, rgba(20, 20, 20, 0.95), rgba(10, 10, 10, 0.98)); border: 2px solid var(--primary-orange); border-radius: 18px; padding: 0; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(var(--primary-orange-rgb), 0.4); overflow: hidden; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .popup-header { display: flex; align-items: center; padding: 18px 20px; border-bottom: 1px solid rgba(var(--primary-orange-rgb), 0.3); position: relative; }
+    .popup-title { color: var(--primary-orange); letter-spacing: 2px; font-size: 1.35rem; flex: 0 1 auto; text-align: center; text-shadow: 0 0 10px rgba(var(--primary-orange-rgb), 0.5); margin: 0 auto; }
+    .popup-body { padding: 22px 20px; color: var(--light-text); font-size: 1rem; line-height: 1.6; }
+    .popup-highlight { color: var(--primary-orange); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 0 8px rgba(var(--primary-orange-rgb), 0.5); }
+    .popup-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(var(--primary-orange-rgb), 0.4), transparent); margin: 18px 0; }
+    .popup-discord-text { color: var(--gray-text); margin-bottom: 15px; }
+    .popup-discord-btn { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 14px 18px; background: rgba(88, 101, 242, 0.15); border: 2px solid #5865F2; border-radius: 12px; color: #fff; font-size: 1rem; font-weight: bold; letter-spacing: 0.5px; text-decoration: none; transition: all 0.3s ease; cursor: none !important; margin: 8px 0; box-sizing: border-box; }
+    .popup-discord-btn i { font-size: 1.4rem; color: #5865F2; filter: drop-shadow(0 0 5px rgba(88, 101, 242, 0.5)); }
+    .popup-discord-btn:hover { background: rgba(88, 101, 242, 0.25); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3); border-color: #7983f5; }
+    .popup-live-btn { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 14px 18px; background: rgba(var(--primary-orange-rgb), 0.15); border: 2px solid var(--primary-orange); border-radius: 12px; color: var(--primary-orange); font-size: 1rem; font-weight: bold; letter-spacing: 0.5px; text-decoration: none; transition: all 0.3s ease; cursor: none !important; margin: 8px 0; box-sizing: border-box; }
+    .popup-live-btn i { font-size: 1.4rem; color: var(--primary-orange); filter: drop-shadow(0 0 5px rgba(var(--primary-orange-rgb), 0.5)); }
+    .popup-live-btn:hover { background: rgba(var(--primary-orange-rgb), 0.25); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(var(--primary-orange-rgb), 0.3); border-color: var(--accent-orange); }
+    .popup-footer { padding: 15px 20px 20px; text-align: center; }
+    .popup-continue-btn { background: rgba(var(--primary-orange-rgb), 0.1); border: 1px solid var(--primary-orange); border-radius: 50px; padding: 12px 24px; color: var(--primary-orange); font-size: 0.95rem; font-weight: bold; letter-spacing: 0.5px; cursor: none !important; transition: all 0.3s ease; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .popup-continue-btn i { transition: transform 0.3s ease; }
+    .popup-continue-btn:hover { background: rgba(var(--primary-orange-rgb), 0.2); box-shadow: 0 0 20px rgba(var(--primary-orange-rgb), 0.3); }
+    .popup-continue-btn:hover i { transform: translateX(5px); }
+    @keyframes popupSlideIn { 0% { opacity: 0; transform: scale(0.9) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @media (max-width: 480px) { .popup-header { padding: 15px; } .popup-title { font-size: 1.15rem; } .popup-body { padding: 18px 15px; font-size: 0.95rem; } .popup-discord-btn, .popup-live-btn { padding: 12px; font-size: 0.9rem; } }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;staticPopup&quot; class=&quot;popup-modal&quot;&gt;
+    &lt;div class=&quot;popup-overlay&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;popup-container&quot;&gt;
+      &lt;div class=&quot;popup-content&quot;&gt;
+        &lt;div class=&quot;popup-header&quot;&gt;
+          &lt;h2 class=&quot;popup-title&quot;&gt;NOAHS TUTORING HUB STATIC&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;popup-body&quot;&gt;
+          &lt;p&gt;Welcome to &lt;span class=&quot;popup-highlight&quot;&gt;Noahs Tutoring Hub Static&lt;/span&gt; — this version is completely static, with most of the games from the live site.&lt;/p&gt;
+          &lt;p&gt;This version does not have as many features as the live site and will hardly have any updates.&lt;/p&gt;
+          &lt;div class=&quot;popup-divider&quot;&gt;&lt;/div&gt;
+          &lt;p class=&quot;popup-discord-text&quot;&gt;If you want to use the real site, click the link below or find more in our Discord:&lt;/p&gt;
+          &lt;a href=&quot;https://discord.com/invite/UKUxQ5SA7N&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;popup-discord-btn&quot;&gt;
+            &lt;i class=&quot;fab fa-discord&quot;&gt;&lt;/i&gt; discord.gg/UKUxQ5SA7N
+          &lt;/a&gt;
+          &lt;a href=&quot;https://noahstutoring.academy&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;popup-live-btn&quot;&gt;
+            &lt;i class=&quot;fas fa-globe&quot;&gt;&lt;/i&gt; noahstutoring.academy
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;popup-footer&quot;&gt;
+          &lt;button class=&quot;popup-continue-btn&quot; onclick=&quot;closeStaticPopup()&quot;&gt;
+            Continue to this version &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;site-startup-loader&quot; id=&quot;siteStartupLoader&quot; aria-hidden=&quot;false&quot;&gt;
+    &lt;iframe class=&quot;site-startup-loader-frame&quot; src=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/loader.html&quot; title=&quot;Loading Noah's Tutoring&quot;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;custom-scrollbar&quot;&gt;
+    &lt;div id=&quot;custom-scrollbar-track&quot;&gt;
+      &lt;div id=&quot;custom-scrollbar-thumb&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;custom-cursor&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;background-root&quot;&gt;
+    &lt;div id=&quot;starfield-layer&quot;&gt;&lt;/div&gt;
+    &lt;canvas id=&quot;matrix-bg&quot;&gt;&lt;/canvas&gt;
+    &lt;div id=&quot;paths-layer&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;background-glow&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;background-vignette&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;container&quot; id=&quot;main-container&quot;&gt;
+    &lt;header&gt;
+      &lt;div class=&quot;top-bar&quot;&gt;
+        &lt;div class=&quot;logo-container&quot; onclick=&quot;switchTab('lessons')&quot; role=&quot;button&quot; tabindex=&quot;0&quot;
+          onkeydown=&quot;if(event.key==='Enter'||event.key===' '){event.preventDefault();switchTab('lessons');}&quot;&gt;
+          &lt;img alt=&quot;Noah's Tutoring Hub&quot; class=&quot;logo&quot;
+            src=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;top-nav-actions&quot;&gt;
+          &lt;div class=&quot;nav-tabs&quot;&gt;
+            &lt;div class=&quot;nav-tab active&quot; id=&quot;lessonsTab&quot; onclick=&quot;switchTab('lessons')&quot;&gt;LESSONS&lt;/div&gt;
+            &lt;div class=&quot;nav-tab&quot; id=&quot;settingsTab&quot; onclick=&quot;switchTab('settings')&quot;&gt;SETTINGS&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;section id=&quot;home-section&quot;&gt;
+      &lt;div class=&quot;home-hero&quot;&gt;
+        &lt;div class=&quot;home-logo-wrap&quot; id=&quot;homeLogoWrap&quot;&gt;
+          &lt;img alt=&quot;Noah's Tutoring Hub&quot; class=&quot;home-logo&quot;
+            src=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/images/logo.png&quot;&gt;
+          &lt;div class=&quot;home-logo-shine&quot; id=&quot;homeLogoShine&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;home-subtitle&quot;&gt;&lt;span id=&quot;typing-quote&quot;&gt;&lt;/span&gt;&lt;span class=&quot;cursor&quot;&gt;|&lt;/span&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section id=&quot;all-lessons&quot;&gt;
+      &lt;h2&gt;ALL LESSONS&lt;/h2&gt;
+      &lt;div class=&quot;search-container&quot;&gt;
+        &lt;input class=&quot;search-box&quot; id=&quot;searchInput&quot; placeholder=&quot;Search lessons...&quot; type=&quot;text&quot;&gt;
+        &lt;div class=&quot;search-icon&quot;&gt;&lt;i class=&quot;fas fa-search&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;search-stats&quot; id=&quot;searchStats&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;sorter-section&quot;&gt;
+        &lt;div class=&quot;sorter-wrapper&quot;&gt;
+          &lt;select class=&quot;sort-select&quot; id=&quot;sortSelect&quot;&gt;
+            &lt;option value=&quot;default&quot;&gt;[NEWEST]&lt;/option&gt;
+            &lt;option value=&quot;alphabetical&quot;&gt;[A - Z]&lt;/option&gt;
+            &lt;option value=&quot;reverse&quot;&gt;[Z - A]&lt;/option&gt;
+            &lt;option value=&quot;random&quot;&gt;[RANDOMIZED]&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;div class=&quot;custom-arrow&quot;&gt;▼&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;lessons-grid&quot; id=&quot;allLessonsGrid&quot;&gt;&lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section id=&quot;settings-section&quot;&gt;
+      &lt;div class=&quot;modal-content&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+          &lt;div class=&quot;modal-title&quot;&gt;&lt;i class=&quot;fas fa-cog&quot;&gt;&lt;/i&gt; Settings&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;div class=&quot;setting-item setting-item-wide setting-theme&quot;&gt;
+            &lt;div class=&quot;setting-label&quot;&gt;
+              &lt;i class=&quot;fas fa-palette&quot;&gt;&lt;/i&gt; Theme Color
+            &lt;/div&gt;
+            &lt;div class=&quot;setting-description&quot;&gt;
+              Choose a preset theme or create a custom one
+            &lt;/div&gt;
+            &lt;div class=&quot;theme-preview&quot;&gt;
+              &lt;div class=&quot;theme-option active&quot; data-theme=&quot;default&quot; onclick=&quot;selectPresetTheme('default')&quot;
+                title=&quot;Default Orange&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;theme-option&quot; data-theme=&quot;rainbow&quot; onclick=&quot;selectPresetTheme('rainbow')&quot; title=&quot;Rainbow&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;theme-option&quot; data-theme=&quot;cyber-green&quot; onclick=&quot;selectPresetTheme('cyber-green')&quot;
+                title=&quot;Cyber Green&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;theme-option&quot; data-theme=&quot;ice-blue&quot; onclick=&quot;selectPresetTheme('ice-blue')&quot; title=&quot;Ice Blue&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;theme-option&quot; data-theme=&quot;solarized&quot; onclick=&quot;selectPresetTheme('solarized')&quot;
+                title=&quot;Solarized&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;theme-option&quot; data-theme=&quot;purple-haze&quot; onclick=&quot;selectPresetTheme('purple-haze')&quot;
+                title=&quot;Purple Haze&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;theme-option&quot; data-theme=&quot;custom&quot; onclick=&quot;selectPresetTheme('custom')&quot; title=&quot;Custom Color&quot;&gt;
+                &lt;i class=&quot;fas fa-plus&quot;
+                  style=&quot;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; z-index: 2;&quot;&gt;&lt;/i&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;color-input-container&quot; id=&quot;customColorInput&quot; style=&quot;display: none;&quot;&gt;
+              &lt;div class=&quot;color-preview&quot; id=&quot;colorPreview&quot;&gt;&lt;/div&gt;&lt;input class=&quot;color-input&quot; id=&quot;customHexInput&quot;
+                maxlength=&quot;7&quot; placeholder=&quot;#c27c15&quot; type=&quot;text&quot;&gt; &lt;button class=&quot;apply-btn&quot;
+                onclick=&quot;applyCustomTheme()&quot;&gt;Apply Color&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;setting-item setting-item-wide setting-background&quot;&gt;
+            &lt;div class=&quot;setting-label&quot;&gt;
+              &lt;i class=&quot;fas fa-layer-group&quot;&gt;&lt;/i&gt; Background
+            &lt;/div&gt;
+            &lt;div class=&quot;setting-description&quot;&gt;
+              Select the animated background style.
+            &lt;/div&gt;
+            &lt;div class=&quot;background-options&quot; id=&quot;backgroundOptions&quot;&gt;
+              &lt;button class=&quot;background-option&quot; data-background=&quot;matrix&quot;
+                onclick=&quot;setBackgroundStyle('matrix')&quot;&gt;Matrix&lt;/button&gt;
+              &lt;button class=&quot;background-option&quot; data-background=&quot;topography&quot;
+                onclick=&quot;setBackgroundStyle('topography')&quot;&gt;Topagraphy&lt;/button&gt;
+              &lt;button class=&quot;background-option&quot; data-background=&quot;constellation&quot;
+                onclick=&quot;setBackgroundStyle('constellation')&quot;&gt;Constellation&lt;/button&gt;
+              &lt;button class=&quot;background-option&quot; data-background=&quot;starfield&quot;
+                onclick=&quot;setBackgroundStyle('starfield')&quot;&gt;Starfield&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;setting-item setting-cursor&quot;&gt;
+            &lt;div class=&quot;setting-label&quot;&gt;
+              &lt;i class=&quot;fas fa-mouse-pointer&quot;&gt;&lt;/i&gt; Custom Cursor
+            &lt;/div&gt;
+            &lt;div class=&quot;setting-description&quot;&gt;
+              Choose your cursor style.
+            &lt;/div&gt;
+            &lt;select class=&quot;text-input&quot; id=&quot;cursorStyleSelect&quot; onchange=&quot;setCursorStyle(this.value)&quot;&gt;
+              &lt;option value=&quot;default&quot;&gt;Default&lt;/option&gt;
+              &lt;option value=&quot;ring&quot;&gt;Ring&lt;/option&gt;
+              &lt;option value=&quot;dot&quot;&gt;Dot&lt;/option&gt;
+              &lt;option value=&quot;square&quot;&gt;Square&lt;/option&gt;
+              &lt;option value=&quot;crosshair&quot;&gt;Crosshair&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;setting-item setting-inactive&quot;&gt;
+            &lt;div class=&quot;setting-label&quot;&gt;
+              &lt;i class=&quot;fas fa-window-maximize&quot;&gt;&lt;/i&gt; Inactive Tab Title &amp; Icon
+            &lt;/div&gt;
+            &lt;div class=&quot;setting-description&quot;&gt;
+              Set what appears when this tab is inactive (title + favicon).
+            &lt;/div&gt;&lt;input class=&quot;text-input&quot; id=&quot;customTitle&quot; placeholder=&quot;Inactive tab title...&quot; type=&quot;text&quot;
+              value=&quot;Home&quot;&gt;
+            &lt;input class=&quot;text-input&quot; id=&quot;customFavicon&quot; placeholder=&quot;Inactive favicon URL...&quot; type=&quot;text&quot;
+              value=&quot;https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/images/fruh.png&quot;&gt;
+            &lt;div class=&quot;settings-button-row&quot;&gt;
+              &lt;button class=&quot;apply-btn&quot; onclick=&quot;applyInactiveTabSettings()&quot;&gt;&lt;i class=&quot;fas fa-check&quot;&gt;&lt;/i&gt;
+                Apply Settings&lt;/button&gt; &lt;button class=&quot;apply-btn btn-danger&quot; onclick=&quot;revertFavicon(this)&quot;&gt;&lt;i
+                  class=&quot;fas fa-undo&quot;&gt;&lt;/i&gt;
+                Revert&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;setting-item setting-logo&quot;&gt;
+            &lt;div class=&quot;setting-label&quot;&gt;
+              &lt;i class=&quot;fas fa-image&quot;&gt;&lt;/i&gt; Site Logo
+            &lt;/div&gt;
+            &lt;div class=&quot;setting-description&quot;&gt;
+              Upload a custom logo for the main page
+            &lt;/div&gt;
+            &lt;div class=&quot;file-upload-container&quot;&gt;
+              &lt;div class=&quot;logo-preview&quot; id=&quot;logoPreview&quot;&gt;
+                &lt;img alt=&quot;Logo Preview&quot; src=&quot;&quot; style=&quot;display: none;&quot;&gt; &lt;i class=&quot;fas fa-image&quot;
+                  style=&quot;color: var(--gray-text); font-size: 1.5rem;&quot;&gt;&lt;/i&gt;
+              &lt;/div&gt;&lt;label class=&quot;file-btn&quot;&gt;&lt;i class=&quot;fas fa-upload&quot;&gt;&lt;/i&gt; Choose Logo &lt;input accept=&quot;image/*&quot;
+                  class=&quot;file-input&quot; id=&quot;logoUpload&quot; onchange=&quot;handleLogoUpload(event)&quot; type=&quot;file&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;&lt;button class=&quot;apply-btn&quot; onclick=&quot;revertLogo(this)&quot; style=&quot;margin-top: 10px; width: 100%;&quot;&gt;&lt;i
+                class=&quot;fas fa-undo&quot;&gt;&lt;/i&gt; Revert to Default Logo&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;setting-item setting-ads&quot;&gt;
+            &lt;div class=&quot;setting-label&quot;&gt;
+              &lt;i class=&quot;fas fa-ad&quot;&gt;&lt;/i&gt; Disable Ads
+            &lt;/div&gt;
+            &lt;div class=&quot;setting-description&quot;&gt;
+              Ads are currently disabled site-wide. This toggle remains for compatibility only.
+            &lt;/div&gt;&lt;label class=&quot;toggle-switch&quot;&gt;&lt;input id=&quot;adToggle&quot; onchange=&quot;toggleAds(this.checked)&quot; type=&quot;checkbox&quot;&gt;
+              &lt;span class=&quot;toggle-slider&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;setting-item setting-import&quot;&gt;
+            &lt;div class=&quot;setting-label&quot;&gt;
+              &lt;i class=&quot;fas fa-database&quot;&gt;&lt;/i&gt; Export/Import Site Data
+            &lt;/div&gt;
+            &lt;div class=&quot;setting-description&quot;&gt;
+              Export or import complete site data: settings, favorites, local storage, session storage, and cookies.
+            &lt;/div&gt;
+            &lt;div class=&quot;settings-button-row&quot; style=&quot;margin-top: 15px;&quot;&gt;
+              &lt;button class=&quot;apply-btn&quot; onclick=&quot;exportSettings()&quot;&gt;&lt;i class=&quot;fas fa-download&quot;&gt;&lt;/i&gt;
+                Export Data&lt;/button&gt; &lt;button class=&quot;apply-btn&quot; onclick=&quot;importSettings()&quot;&gt;&lt;i class=&quot;fas fa-upload&quot;&gt;&lt;/i&gt;
+                Import Data&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;file-upload-container&quot; id=&quot;importFileContainer&quot; style=&quot;display: none; margin-top: 15px;&quot;&gt;
+              &lt;input accept=&quot;.json,application/json&quot; class=&quot;file-input&quot; id=&quot;settingsFileInput&quot; type=&quot;file&quot;&gt; &lt;label
+                class=&quot;file-btn&quot; for=&quot;settingsFileInput&quot; style=&quot;flex: 1;&quot;&gt;&lt;i class=&quot;fas fa-file-import&quot;&gt;&lt;/i&gt; Select
+                Settings File&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;settingsImportStatus&quot;
+              style=&quot;margin-top: 10px; color: var(--accent-orange); font-size: 0.9rem; display: none;&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;footer class=&quot;site-footer&quot;&gt;
+      &lt;div class=&quot;site-footer-left&quot;&gt;
+        &lt;p&gt;© 2026 Noah's Tutoring Hub.&lt;/p&gt;
+        &lt;p&gt;Site mostly coded by &lt;a class=&quot;site-footer-link&quot; href=&quot;https://1key.lol&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;1key&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;nav class=&quot;site-footer-center&quot; aria-label=&quot;Legal&quot;&gt;
+        &lt;a class=&quot;site-footer-link site-footer-legal-link&quot; href=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/privacy&quot;&gt;Privacy Policy&lt;/a&gt;
+        &lt;a class=&quot;site-footer-link site-footer-legal-link&quot; href=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/terms&quot;&gt;Terms of Service&lt;/a&gt;
+        &lt;a class=&quot;site-footer-link site-footer-legal-link&quot; href=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/dmca&quot;&gt;DMCA&lt;/a&gt;
+      &lt;/nav&gt;
+      &lt;div class=&quot;site-footer-right&quot;&gt;
+        &lt;a aria-label=&quot;Discord&quot; class=&quot;site-footer-link site-footer-icon&quot; href=&quot;https://discord.gg/pCGQ8vrKza&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;i class=&quot;fab fa-discord&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a aria-label=&quot;GitHub&quot; class=&quot;site-footer-link site-footer-icon&quot; href=&quot;https://github.com/NoahsAmazingTutoringHelp&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a aria-label=&quot;TikTok&quot; class=&quot;site-footer-link site-footer-icon&quot; href=&quot;https://www.tiktok.com/@noahstutoringhub&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;i class=&quot;fab fa-tiktok&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a aria-label=&quot;YouTube&quot; class=&quot;site-footer-link site-footer-icon&quot; href=&quot;https://www.youtube.com/@noahstutoringhub&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;i class=&quot;fab fa-youtube&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;game-page&quot; id=&quot;gamePage&quot;&gt;
+    &lt;div class=&quot;game-browser&quot;&gt;
+      &lt;div class=&quot;game-tabbar&quot;&gt;
+        &lt;div class=&quot;game-session-meta&quot;&gt;
+          &lt;span class=&quot;game-session-title&quot; id=&quot;gameSessionTitle&quot;&gt;Select a lesson&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;game-toolbar&quot;&gt;
+          &lt;button class=&quot;btn refresh-btn&quot; onclick=&quot;refreshGame()&quot; title=&quot;Reload Game&quot;&gt;&lt;i
+              class=&quot;fas fa-rotate-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class=&quot;btn&quot; onclick=&quot;downloadCurrentGame()&quot; title=&quot;Download Game&quot;&gt;&lt;i
+              class=&quot;fas fa-download&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class=&quot;btn&quot; onclick=&quot;toggleFullscreen()&quot; title=&quot;Fullscreen Game&quot;&gt;&lt;i
+              class=&quot;fas fa-expand&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class=&quot;btn&quot; onclick=&quot;exitGameBrowser()&quot; title=&quot;Exit Browser&quot;&gt;&lt;i class=&quot;fas fa-xmark&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;game-view-stack&quot; id=&quot;gameViewStack&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button id=&quot;backToTop&quot; title=&quot;Go to top&quot;&gt;&lt;i class=&quot;fas fa-arrow-up&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;div id=&quot;contextMenu&quot;&gt;
+    &lt;div class=&quot;context-menu-item&quot; onclick=&quot;openSettings()&quot;&gt;&lt;i class=&quot;fas fa-cog&quot;&gt;&lt;/i&gt; &lt;span&gt;Settings&lt;/span&gt; &lt;span
+        class=&quot;menu-shortcut&quot;&gt;Ctrl+Shift+S&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;context-menu-item&quot; onclick=&quot;window.location.reload()&quot;&gt;&lt;i class=&quot;fas fa-redo&quot;&gt;&lt;/i&gt; &lt;span&gt;Refresh&lt;/span&gt;
+      &lt;span class=&quot;menu-shortcut&quot;&gt;F5&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/scripts/starfield.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/js/games.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/js/main.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    function showStaticPopup() {
+      const popup = document.getElementById('staticPopup');
+      if (popup) {
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', handleStaticPopupEscape);
+      }
+    }
+    function closeStaticPopup() {
+      const popup = document.getElementById('staticPopup');
+      if (popup) {
+        popup.style.display = 'none';
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', handleStaticPopupEscape);
+        localStorage.setItem('staticPopupShown', 'true');
+      }
+    }
+    function handleStaticPopupEscape(e) {
+      if (e.key === 'Escape') closeStaticPopup();
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!localStorage.getItem('staticPopupShown')) {
+        setTimeout(showStaticPopup, 3500);
+      }
+    });
+    document.addEventListener('click', function (e) {
+      const popup = document.getElementById('staticPopup');
+      if (!popup || popup.style.display !== 'flex') return;
+      if (e.target.classList.contains('popup-overlay')) closeStaticPopup();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+"></iframe>
+</foreignObject>
+</svg>

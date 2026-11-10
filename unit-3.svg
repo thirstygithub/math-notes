@@ -1,0 +1,874 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="background:#000">
+<title>Math Notes</title>
+<foreignObject x="0" y="0" width="100%" height="100%">
+<iframe xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;border:0;display:block" allow="fullscreen; autoplay; gamepad" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-us&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;base href=&quot;https://cdn.jsdelivr.net/gh/Vanta-git/repo-halloween-v1@main/&quot;&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://cdn.jsdelivr.net&quot; crossorigin&gt;
+  &lt;link rel=&quot;dns-prefetch&quot; href=&quot;https://cdn.jsdelivr.net&quot;&gt;
+  &lt;link rel=&quot;preload&quot; as=&quot;script&quot; fetchpriority=&quot;high&quot; href=&quot;https://cdn.jsdelivr.net/gh/Vanta-git/repo-halloween-v1@main/Build/1234.loader.js&quot; crossorigin&gt;
+  &lt;link rel=&quot;preload&quot; as=&quot;fetch&quot; fetchpriority=&quot;high&quot; href=&quot;https://cdn.jsdelivr.net/gh/Vanta-git/repo-halloween-v1@main/split-manifest.json&quot; crossorigin&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover&quot;&gt;
+  &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot;&gt;
+  &lt;title&gt;R.E.P.O. WebGL&lt;/title&gt;
+
+  &lt;style&gt;
+    :root { color-scheme: dark; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+
+    #unity-container {
+      position: relative;
+      width: min(100vw, calc(100vh * 16 / 9));
+      height: min(100vh, calc(100vw * 9 / 16));
+      background: #000;
+    }
+
+    #unity-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #000;
+      outline: none;
+      touch-action: none;
+    }
+
+    #unity-loading-bar {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      z-index: 5;
+      transition: opacity 0.25s ease;
+    }
+
+    #unity-progress-bar-empty {
+      width: 220px;
+      max-width: 65%;
+      height: 4px;
+      background: #292929;
+      overflow: hidden;
+      border-radius: 0;
+    }
+
+    #unity-progress-bar-full {
+      width: 0%;
+      height: 100%;
+      background: #fff;
+      transition: width 0.15s linear;
+    }
+
+    #unity-warning {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      display: none;
+      font-size: 13px;
+    }
+
+    #unity-warning div {
+      padding: 10px 14px;
+      background: #d92b2b;
+      color: #fff;
+    }
+
+    #fullscreen-btn {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      z-index: 30;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      background: rgba(15, 15, 18, 0.72);
+      color: #fff;
+      font-size: 19px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #fullscreen-btn:hover {
+      background: rgba(40, 40, 46, 0.9);
+    }
+
+    #rotate-hint {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 40;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(15, 15, 18, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      font-size: 12px;
+      color: #d7d7de;
+      display: none;
+      pointer-events: none;
+    }
+
+    #unity-container:fullscreen {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #unity-container:fullscreen #unity-canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (orientation: portrait) and (max-width: 900px) {
+      #rotate-hint { display: block; }
+      #unity-container {
+        width: 100vw;
+        height: min(100vh, calc(100vw * 9 / 16));
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;unity-container&quot;&gt;
+    &lt;canvas id=&quot;unity-canvas&quot; width=&quot;960&quot; height=&quot;600&quot; tabindex=&quot;-1&quot;&gt;&lt;/canvas&gt;
+
+    &lt;div id=&quot;unity-loading-bar&quot;&gt;
+      &lt;div id=&quot;unity-progress-bar-empty&quot;&gt;
+        &lt;div id=&quot;unity-progress-bar-full&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;unity-warning&quot;&gt;&lt;/div&gt;
+
+    &lt;button id=&quot;fullscreen-btn&quot; title=&quot;Fullscreen&quot; aria-label=&quot;Fullscreen&quot;&gt;&amp;#9974;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;rotate-hint&quot;&gt;Rotate your device to landscape for the best experience.&lt;/div&gt;
+
+  &lt;!-- The complete split.js browser shim is embedded below. --&gt;
+  &lt;script&gt;
+/*
+ * split.js
+ *
+ * Big Unity WebGL build files (*.unityweb) are stored cut into 3 MB parts so no
+ * single file has to be uploaded/downloaded whole. This file does two jobs:
+ *
+ *  1. Node CLI - cuts the big files into parts and writes split-manifest.json
+ *
+ *        node split.js            split every file bigger than 15 MB into 3 MB parts
+ *        node split.js restore    put the original files back and remove the parts
+ *
+ *  2. Browser shim - included by index.html before the Unity loader. It patches
+ *     fetch (and XMLHttpRequest) so a request for Build/1234.data.unityweb is
+ *     answered with a single streaming Response that is the parts concatenated
+ *     in order. Unity never knows the difference: same URL, same bytes, same
+ *     Content-Length, progress reporting still works.
+ */
+(function () {
+  &quot;use strict&quot;;
+
+  var CHUNK_SIZE = 3 * 1024 * 1024; // 3 MB
+  var THRESHOLD = 15 * 1024 * 1024; // files bigger than 15 MB get split
+  var MANIFEST_NAME = &quot;split-manifest.json&quot;;
+  var READ_AHEAD = 48 * 1024 * 1024; // keep more data ready for Unity
+
+  /* ------------------------------------------------------------------ */
+  /* Node side: split / restore                                          */
+  /* ------------------------------------------------------------------ */
+
+  function runCli(argv) {
+    var fs = require(&quot;fs&quot;);
+    var path = require(&quot;path&quot;);
+    var crypto = require(&quot;crypto&quot;);
+
+    var root = __dirname;
+    var manifestPath = path.join(root, MANIFEST_NAME);
+    var command = String(argv[0] || &quot;split&quot;).toLowerCase();
+
+    function abs(rel) {
+      return path.join(root, rel);
+    }
+
+    function pad(index, width) {
+      var text = String(index);
+      while (text.length &lt; width) text = &quot;0&quot; + text;
+      return text;
+    }
+
+    function megabytes(bytes) {
+      return (bytes / (1024 * 1024)).toFixed(1) + &quot; MB&quot;;
+    }
+
+    var SKIP_DIRS = { &quot;.git&quot;: 1, node_modules: 1, &quot;.freebuff&quot;: 1 };
+
+    function walk(dir, out) {
+      var entries = fs.readdirSync(dir, { withFileTypes: true });
+      for (var i = 0; i &lt; entries.length; i++) {
+        var entry = entries[i];
+        var full = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          if (!SKIP_DIRS[entry.name]) walk(full, out);
+        } else if (entry.isFile()) {
+          out.push(path.relative(root, full).split(path.sep).join(&quot;/&quot;));
+        }
+      }
+      return out;
+    }
+
+    function readExact(handle, buffer, length, position) {
+      var done = 0;
+      while (done &lt; length) {
+        var read = fs.readSync(handle, buffer, done, length - done, position + done);
+        if (read === 0) throw new Error(&quot;unexpected end of file&quot;);
+        done += read;
+      }
+    }
+
+    function splitOne(rel, families) {
+      var file = abs(rel);
+      var size = fs.statSync(file).size;
+      var chunks = Math.ceil(size / CHUNK_SIZE);
+      var digits = Math.max(2, String(chunks - 1).length);
+
+      process.stdout.write(&quot;  &quot; + rel + &quot; (&quot; + megabytes(size) + &quot;) -&gt; &quot; + chunks + &quot; parts ... &quot;);
+
+      var original = crypto.createHash(&quot;sha256&quot;);
+      var buffer = Buffer.allocUnsafe(CHUNK_SIZE);
+      var position = 0;
+      var handle = fs.openSync(file, &quot;r&quot;);
+      try {
+        for (var i = 0; i &lt; chunks; i++) {
+          var length = Math.min(CHUNK_SIZE, size - position);
+          readExact(handle, buffer, length, position);
+          var slice = buffer.subarray(0, length);
+          original.update(slice);
+          fs.writeFileSync(file + &quot;.part&quot; + pad(i, digits), slice);
+          position += length;
+        }
+      } finally {
+        fs.closeSync(handle);
+      }
+
+      // Prove the parts really rebuild the original before deleting it.
+      var expected = original.digest(&quot;hex&quot;);
+      var rebuilt = crypto.createHash(&quot;sha256&quot;);
+      for (var j = 0; j &lt; chunks; j++) {
+        rebuilt.update(fs.readFileSync(file + &quot;.part&quot; + pad(j, digits)));
+      }
+      if (rebuilt.digest(&quot;hex&quot;) !== expected) {
+        throw new Error(&quot;verification failed for &quot; + rel + &quot;; original left untouched&quot;);
+      }
+
+      fs.unlinkSync(file);
+      families[rel] = { parts: indexMap(chunks), size: size, sha256: expected, digits: digits };
+      console.log(&quot;ok&quot;);
+    }
+
+    function indexMap(chunks) {
+      var list = {};
+      for (var i = 0; i &lt; chunks; i++) list[i] = true;
+      return list;
+    }
+
+    function splitAll() {
+      var previous = {};
+      if (fs.existsSync(manifestPath)) {
+        try {
+          previous = JSON.parse(fs.readFileSync(manifestPath, &quot;utf8&quot;)).files || {};
+        } catch (error) {
+          previous = {};
+        }
+      }
+
+      var files = walk(root, []);
+      var families = {};
+      var big = [];
+      var already = 0;
+
+      for (var i = 0; i &lt; files.length; i++) {
+        var rel = files[i];
+        var match = /^(.*)\.part(\d+)$/.exec(rel);
+        if (match) {
+          var base = match[1];
+          var index = Number(match[2]);
+          var family = families[base] || (families[base] = { parts: {}, size: 0, sha256: null, digits: 0 });
+          family.parts[index] = true;
+          family.size += fs.statSync(abs(rel)).size;
+          family.digits = Math.max(family.digits, match[2].length);
+          continue;
+        }
+        if (fs.statSync(abs(rel)).size &gt; THRESHOLD) big.push(rel);
+      }
+
+      already = Object.keys(families).length;
+
+      if (!big.length) {
+        console.log(&quot;No file is bigger than &quot; + megabytes(THRESHOLD) + &quot;.&quot;);
+      } else {
+        console.log(&quot;Splitting &quot; + big.length + &quot; file(s) into &quot; + megabytes(CHUNK_SIZE) + &quot; parts:&quot;);
+        for (var k = 0; k &lt; big.length; k++) splitOne(big[k], families);
+      }
+
+      if (already) {
+        console.log(&quot;Found &quot; + already + &quot; file(s) that are already split; keeping them in the manifest.&quot;);
+      }
+
+      var manifest = {
+        version: 1,
+        chunkSize: CHUNK_SIZE,
+        threshold: THRESHOLD,
+        generatedAt: new Date().toISOString(),
+        files: {}
+      };
+      var bases = Object.keys(families).sort();
+      var parts = 0;
+      for (var b = 0; b &lt; bases.length; b++) {
+        var name = bases[b];
+        var entry = families[name];
+        var indexes = Object.keys(entry.parts)
+          .map(Number)
+          .sort(function (x, y) {
+            return x - y;
+          });
+        parts += indexes.length;
+        var known = previous[name];
+        manifest.files[name] = {
+          base: name,
+          size: entry.size,
+          chunks: indexes.length,
+          digits: entry.digits || String(indexes[indexes.length - 1]).length,
+          sha256: entry.sha256 || (known &amp;&amp; known.size === entry.size ? known.sha256 : null)
+        };
+      }
+
+      if (!bases.length) {
+        console.log(&quot;Nothing to record in &quot; + MANIFEST_NAME + &quot;.&quot;);
+        return;
+      }
+
+      fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + &quot;\n&quot;);
+      console.log(&quot;Wrote &quot; + MANIFEST_NAME + &quot;: &quot; + bases.length + &quot; file(s), &quot; + parts + &quot; part(s).&quot;);
+      console.log(&quot;index.html loads split.js, which reassembles them for the game.&quot;);
+    }
+
+    function restoreAll() {
+      if (!fs.existsSync(manifestPath)) throw new Error(MANIFEST_NAME + &quot; not found; nothing to restore.&quot;);
+      var manifest = JSON.parse(fs.readFileSync(manifestPath, &quot;utf8&quot;));
+      var bases = Object.keys(manifest.files || {});
+
+      for (var i = 0; i &lt; bases.length; i++) {
+        var base = bases[i];
+        var entry = manifest.files[base];
+        var file = abs(base);
+        if (fs.existsSync(file)) {
+          console.log(&quot;  &quot; + base + &quot; already exists; skipping&quot;);
+          continue;
+        }
+        var hash = crypto.createHash(&quot;sha256&quot;);
+        var out = fs.openSync(file, &quot;w&quot;);
+        try {
+          for (var p = 0; p &lt; entry.chunks; p++) {
+            var part = fs.readFileSync(file + &quot;.part&quot; + pad(p, entry.digits));
+            hash.update(part);
+            fs.writeSync(out, part);
+          }
+        } finally {
+          fs.closeSync(out);
+        }
+        if (entry.sha256 &amp;&amp; hash.digest(&quot;hex&quot;) !== entry.sha256) {
+          fs.unlinkSync(file);
+          throw new Error(&quot;restored &quot; + base + &quot; does not match its recorded hash&quot;);
+        }
+        for (var q = 0; q &lt; entry.chunks; q++) fs.unlinkSync(file + &quot;.part&quot; + pad(q, entry.digits));
+        console.log(&quot;  restored &quot; + base + &quot; (&quot; + megabytes(entry.size) + &quot;)&quot;);
+      }
+
+      fs.unlinkSync(manifestPath);
+      console.log(&quot;Removed &quot; + MANIFEST_NAME + &quot;. Files are whole again.&quot;);
+    }
+
+    if (command === &quot;split&quot; || command === &quot;build&quot; || command === &quot;all&quot;) {
+      splitAll();
+    } else if (command === &quot;restore&quot; || command === &quot;join&quot; || command === &quot;unsplit&quot;) {
+      restoreAll();
+    } else {
+      console.error(&quot;Usage: node split.js [split|restore]&quot;);
+      process.exitCode = 1;
+    }
+  }
+
+  /* ------------------------------------------------------------------ */
+  /* Browser side: serve the parts as one response                       */
+  /* ------------------------------------------------------------------ */
+
+  function installBrowserShim(W) {
+    if (W.__unitySplitShimInstalled) return;
+    W.__unitySplitShimInstalled = true;
+
+    var nativeFetch = typeof W.fetch === &quot;function&quot; ? W.fetch.bind(W) : null;
+    if (!nativeFetch) return;
+
+    var manifestPromise = nativeFetch(MANIFEST_NAME, { cache: &quot;force-cache&quot; })
+      .then(function (response) {
+        if (!response.ok) {
+          console.warn(&quot;split.js: &quot; + MANIFEST_NAME + &quot; returned HTTP &quot; + response.status + &quot;; serving files as-is.&quot;);
+          return null;
+        }
+        return response.json();
+      })
+      .catch(function (error) {
+        console.warn(&quot;split.js: could not read &quot; + MANIFEST_NAME + &quot; (&quot; + error + &quot;); serving files as-is.&quot;);
+        return null;
+      });
+
+    function pageBase() {
+      return (W.document &amp;&amp; W.document.baseURI) || W.location.href;
+    }
+
+    function pad(index, width) {
+      var text = String(index);
+      while (text.length &lt; width) text = &quot;0&quot; + text;
+      return text;
+    }
+
+    function chunkUrl(entry, index) {
+      return new W.URL(entry.base + &quot;.part&quot; + pad(index, entry.digits), pageBase()).href;
+    }
+
+    // A request for .../Build/1234.data.unityweb matches the &quot;Build/1234.data.unityweb&quot; entry.
+    function findEntry(data, url) {
+      if (!data || !data.files || url === null) return null;
+      var pathname;
+      try {
+        pathname = decodeURIComponent(new W.URL(String(url), pageBase()).pathname);
+      } catch (error) {
+        return null;
+      }
+      var bases = Object.keys(data.files);
+      for (var i = 0; i &lt; bases.length; i++) {
+        var tail = &quot;/&quot; + bases[i];
+        if (pathname === tail || pathname.slice(-tail.length) === tail) return data.files[bases[i]];
+      }
+      return null;
+    }
+
+    function fetchChunk(entry, index, init) {
+      var options = { credentials: (init &amp;&amp; init.credentials) || &quot;same-origin&quot;, cache: &quot;force-cache&quot;, priority: &quot;high&quot; };
+      if (init &amp;&amp; init.signal) options.signal = init.signal;
+      var url = chunkUrl(entry, index);
+      return nativeFetch(url, options).then(function (response) {
+        if (!response.ok) {
+          throw new Error(&quot;split.js: &quot; + url + &quot; returned HTTP &quot; + response.status + &quot;. Re-run `node split.js` to rebuild the parts.&quot;);
+        }
+        return response.arrayBuffer();
+      });
+    }
+
+    function isWasm(binary) {
+      var head = new Uint8Array(binary, 0, Math.min(4, binary.byteLength));
+      return head.length === 4 &amp;&amp; head[0] === 0x00 &amp;&amp; head[1] === 0x61 &amp;&amp; head[2] === 0x73 &amp;&amp; head[3] === 0x6d;
+    }
+
+    function createBody(entry, init, firstChunk) {
+      var nextToEnqueue = 0;
+      var nextToFetch = 0;
+      var pending = Object.create(null);
+      var cancelled = false;
+      var CONCURRENT_CHUNKS = 12;
+      var strategy = W.ByteLengthQueuingStrategy
+        ? new W.ByteLengthQueuingStrategy({ highWaterMark: READ_AHEAD })
+        : { highWaterMark: 8 };
+
+      function fillQueue() {
+        while (!cancelled &amp;&amp; nextToFetch &lt; entry.chunks &amp;&amp; nextToFetch &lt; nextToEnqueue + CONCURRENT_CHUNKS) {
+          (function (index) {
+            pending[index] = index === 0
+              ? Promise.resolve(firstChunk)
+              : fetchChunk(entry, index, init);
+          })(nextToFetch);
+          nextToFetch++;
+        }
+      }
+
+      fillQueue();
+      return new W.ReadableStream({
+        pull: function (controller) {
+          if (cancelled) return;
+          if (nextToEnqueue &gt;= entry.chunks) {
+            controller.close();
+            return;
+          }
+          var index = nextToEnqueue;
+          return pending[index].then(function (binary) {
+            if (cancelled) return;
+            delete pending[index];
+            controller.enqueue(new Uint8Array(binary));
+            nextToEnqueue++;
+            fillQueue();
+            if (nextToEnqueue &gt;= entry.chunks) controller.close();
+          });
+        },
+        cancel: function () {
+          cancelled = true;
+          pending = Object.create(null);
+        }
+      }, strategy);
+    }
+
+    function splitResponse(entry, init) {
+      return fetchChunk(entry, 0, init).then(function (firstChunk) {
+        if (!firstChunk) throw new Error(&quot;split.js: no parts for &quot; + entry.base);
+        var headers = {
+          &quot;Content-Type&quot;: isWasm(firstChunk) ? &quot;application/wasm&quot; : &quot;application/octet-stream&quot;,
+          &quot;Content-Length&quot;: String(entry.size)
+        };
+        return new W.Response(createBody(entry, init, firstChunk), {
+          status: 200,
+          statusText: &quot;OK&quot;,
+          headers: headers
+        });
+      });
+    }
+
+    W.fetch = function (input, init) {
+      var method = String((init &amp;&amp; init.method) || (input &amp;&amp; input.method) || &quot;GET&quot;).toUpperCase();
+      if (method !== &quot;GET&quot; &amp;&amp; method !== &quot;HEAD&quot;) return nativeFetch(input, init);
+
+      var url = typeof input === &quot;string&quot;
+        ? input
+        : input &amp;&amp; typeof input.url === &quot;string&quot;
+          ? input.url
+          : String(input);
+
+      return manifestPromise.then(function (data) {
+        var entry = findEntry(data, url);
+        if (!entry) return nativeFetch(input, init);
+        if (method === &quot;HEAD&quot;) {
+          return new W.Response(null, { status: 200, headers: { &quot;Content-Length&quot;: String(entry.size) } });
+        }
+        return splitResponse(entry, init);
+      });
+    };
+
+    // Fallback for anything that still loads the build through XHR.
+    var XHR = W.XMLHttpRequest;
+    if (XHR &amp;&amp; XHR.prototype) {
+      var nativeOpen = XHR.prototype.open;
+      var nativeSend = XHR.prototype.send;
+
+      XHR.prototype.open = function (method, url) {
+        this.__splitMethod = String(method || &quot;GET&quot;).toUpperCase();
+        this.__splitUrl = url;
+        return nativeOpen.apply(this, arguments);
+      };
+
+      XHR.prototype.send = function () {
+        var xhr = this;
+        var args = arguments;
+        if ((xhr.__splitMethod !== &quot;GET&quot; &amp;&amp; xhr.__splitMethod !== &quot;HEAD&quot;) || !xhr.__splitUrl) {
+          return nativeSend.apply(xhr, args);
+        }
+
+        manifestPromise.then(function (data) {
+          var entry = findEntry(data, xhr.__splitUrl);
+          if (!entry) {
+            nativeSend.apply(xhr, args);
+            return;
+          }
+          assembleViaXhr(W, xhr, entry, fetchChunk, xhr.__splitUrl);
+        });
+      };
+    }
+
+    W.__unitySplit = {
+      manifest: manifestPromise,
+      chunkUrl: chunkUrl
+    };
+  }
+
+  function assembleViaXhr(W, xhr, entry, fetchChunk, url) {
+    var buffer = new Uint8Array(entry.size);
+    var received = 0;
+
+    function set(name, value) {
+      try {
+        Object.defineProperty(xhr, name, { configurable: true, value: value });
+      } catch (error) {
+        try {
+          xhr[name] = value;
+        } catch (ignored) {}
+      }
+    }
+
+    function fire(name, props) {
+      var event;
+      try {
+        event = new W.ProgressEvent(name, props || {});
+      } catch (error) {
+        try {
+          event = new W.Event(name);
+        } catch (ignored) {
+          return;
+        }
+      }
+      try {
+        xhr.dispatchEvent(event);
+      } catch (ignored) {}
+    }
+
+    // Download split pieces concurrently, then join them in their original order.
+    // This avoids waiting for each 3 MB request to finish before starting the next.
+    var completed = 0;
+    var requests = [];
+    for (var i = 0; i &lt; entry.chunks; i++) {
+      (function (index) {
+        requests.push(fetchChunk(entry, index, null).then(function (binary) {
+          completed += binary.byteLength;
+          set(&quot;readyState&quot;, 3);
+          fire(&quot;readystatechange&quot;, { loaded: completed, total: entry.size, lengthComputable: true });
+          fire(&quot;progress&quot;, { loaded: completed, total: entry.size, lengthComputable: true });
+          return binary;
+        }));
+      })(i);
+    }
+
+    Promise.all(requests).then(function (parts) {
+      for (var partIndex = 0; partIndex &lt; parts.length; partIndex++) {
+        var part = new Uint8Array(parts[partIndex]);
+        buffer.set(part, received);
+        received += part.byteLength;
+      }
+      var type = String(xhr.responseType || &quot;&quot;);
+      var body = buffer.subarray(0, received);
+      var response;
+      if (type === &quot;arraybuffer&quot;) {
+        response = body.buffer.slice(body.byteOffset, body.byteOffset + body.byteLength);
+      } else if (type === &quot;blob&quot;) {
+        response = new W.Blob([body]);
+      } else if (type === &quot;json&quot;) {
+        response = JSON.parse(decode(body));
+      } else if (type === &quot;text&quot; || type === &quot;&quot;) {
+        response = decode(body);
+      } else {
+        response = body;
+      }
+      set(&quot;status&quot;, 200);
+      set(&quot;statusText&quot;, &quot;OK&quot;);
+      set(&quot;responseURL&quot;, url);
+      set(&quot;response&quot;, response);
+      if (type === &quot;&quot; || type === &quot;text&quot;) set(&quot;responseText&quot;, response);
+      set(&quot;readyState&quot;, 4);
+      fire(&quot;readystatechange&quot;, { loaded: received, total: entry.size, lengthComputable: true });
+      fire(&quot;progress&quot;, { loaded: received, total: entry.size, lengthComputable: true });
+      fire(&quot;load&quot;, { loaded: received, total: entry.size, lengthComputable: true });
+      fire(&quot;loadend&quot;, { loaded: received, total: entry.size, lengthComputable: true });
+    }).catch(function (error) {
+      set(&quot;status&quot;, 0);
+      set(&quot;readyState&quot;, 4);
+      fire(&quot;readystatechange&quot;, {});
+      try {
+        xhr.dispatchEvent(new W.ErrorEvent(&quot;error&quot;, { message: String(error) }));
+      } catch (ignored) {
+        fire(&quot;error&quot;, {});
+      }
+      fire(&quot;loadend&quot;, {});
+    });
+
+    function decode(bytes) {
+      if (typeof W.TextDecoder === &quot;function&quot;) return new W.TextDecoder(&quot;utf-8&quot;).decode(bytes);
+      var text = &quot;&quot;;
+      for (var i = 0; i &lt; bytes.length; i++) text += String.fromCharCode(bytes[i]);
+      return text;
+    }
+  }
+
+  if (typeof module !== &quot;undefined&quot; &amp;&amp; module.exports &amp;&amp; typeof require === &quot;function&quot;) {
+    module.exports = { chunkSize: CHUNK_SIZE, threshold: THRESHOLD };
+    if (require.main === module) runCli(process.argv.slice(2));
+  } else if (typeof window !== &quot;undefined&quot;) {
+    installBrowserShim(window);
+  }
+})();
+
+  &lt;/script&gt;
+
+  &lt;script&gt;
+    var container = document.querySelector(&quot;#unity-container&quot;);
+    var canvas = document.querySelector(&quot;#unity-canvas&quot;);
+    var loadingBar = document.querySelector(&quot;#unity-loading-bar&quot;);
+    var progressBarFull = document.querySelector(&quot;#unity-progress-bar-full&quot;);
+    var warningBanner = document.querySelector(&quot;#unity-warning&quot;);
+    var unityInstance = null;
+
+    function unityShowBanner(msg, type) {
+      var div = document.createElement(&quot;div&quot;);
+      div.textContent = msg;
+
+      if (type === &quot;error&quot;) {
+        div.style.background = &quot;#d92b2b&quot;;
+        div.style.color = &quot;#fff&quot;;
+        div.style.padding = &quot;10px&quot;;
+      }
+
+      warningBanner.appendChild(div);
+      warningBanner.style.display = &quot;block&quot;;
+
+      if (type !== &quot;error&quot;) {
+        setTimeout(function () {
+          if (div.parentNode) warningBanner.removeChild(div);
+          warningBanner.style.display =
+            warningBanner.children.length ? &quot;block&quot; : &quot;none&quot;;
+        }, 6000);
+      }
+    }
+
+    var lowEnd = false;
+
+    try {
+      var memory = navigator.deviceMemory || 8;
+      var cores = navigator.hardwareConcurrency || 8;
+      lowEnd =
+        memory &lt;= 4 ||
+        cores &lt;= 4 ||
+        /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || &quot;&quot;);
+    } catch (error) {
+      lowEnd = false;
+    }
+
+    var buildUrl = &quot;./Build&quot;;
+    var loaderUrl = buildUrl + &quot;/1234.loader.js&quot;;
+
+    var config = {
+      arguments: [],
+      dataUrl: buildUrl + &quot;/1234.data.unityweb&quot;,
+      frameworkUrl: buildUrl + &quot;/1234.framework.js.unityweb&quot;,
+      codeUrl: buildUrl + &quot;/1234.wasm.unityweb&quot;,
+      streamingAssetsUrl: &quot;./StreamingAssets&quot;,
+      companyName: &quot;REPO Web&quot;,
+      productName: &quot;R.E.P.O. WebGL&quot;,
+      productVersion: &quot;1.0&quot;,
+      showBanner: unityShowBanner,
+      devicePixelRatio: lowEnd ? 0.7 : Math.min(window.devicePixelRatio || 1, 1),
+      autoSyncPersistentDataPath: true,
+      errorHandler: function (error, url, line) {
+        console.error(&quot;Unity WebGL error: &quot; + error + &quot; (&quot; + url + &quot;:&quot; + line + &quot;)&quot;);
+        return false;
+      }
+    };
+
+    function hideLoadingBar() {
+      if (!loadingBar) return;
+      loadingBar.style.opacity = &quot;0&quot;;
+      setTimeout(function () {
+        if (loadingBar &amp;&amp; loadingBar.parentNode) {
+          loadingBar.parentNode.removeChild(loadingBar);
+        }
+      }, 300);
+    }
+
+    var script = document.createElement(&quot;script&quot;);
+    script.src = loaderUrl;
+    script.fetchPriority = &quot;high&quot;;
+
+    script.onload = function () {
+      if (typeof createUnityInstance !== &quot;function&quot;) {
+        unityShowBanner(&quot;Unity loader did not initialize correctly.&quot;, &quot;error&quot;);
+        return;
+      }
+
+      createUnityInstance(canvas, config, function (progress) {
+        progressBarFull.style.width = Math.round(progress * 100) + &quot;%&quot;;
+      }).then(function (instance) {
+        unityInstance = instance;
+        hideLoadingBar();
+        try { canvas.focus(); } catch (error) {}
+      }).catch(function (message) {
+        console.error(&quot;Unity loading error:&quot;, message);
+        unityShowBanner(&quot;Failed to load the game: &quot; + message, &quot;error&quot;);
+      });
+    };
+
+    script.onerror = function () {
+      unityShowBanner(
+        &quot;Could not load Build/1234.loader.js. Check that your build files exist.&quot;,
+        &quot;error&quot;
+      );
+      console.error(&quot;Unity loader failed:&quot;, loaderUrl);
+    };
+
+    document.body.appendChild(script);
+
+    document.querySelector(&quot;#fullscreen-btn&quot;).addEventListener(&quot;click&quot;, function () {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+        return;
+      }
+
+      var request = container.requestFullscreen || container.webkitRequestFullscreen;
+      if (request) {
+        var result = request.call(container);
+        if (result &amp;&amp; result.catch) {
+          result.catch(function (error) {
+            console.error(&quot;Fullscreen error:&quot;, error);
+          });
+        }
+
+        if (screen.orientation &amp;&amp; screen.orientation.lock) {
+          screen.orientation.lock(&quot;landscape&quot;).catch(function () {});
+        }
+      }
+    });
+
+    function flushSaves() {
+      if (!unityInstance) return;
+      try {
+        unityInstance.SendMessage(&quot;WebGLPersistence&quot;, &quot;Flush&quot;);
+      } catch (error) {
+        console.warn(&quot;Could not flush Unity saves:&quot;, error);
+      }
+    }
+
+    window.addEventListener(&quot;pagehide&quot;, flushSaves);
+    window.addEventListener(&quot;beforeunload&quot;, flushSaves);
+
+    document.addEventListener(&quot;visibilitychange&quot;, function () {
+      if (document.visibilityState === &quot;hidden&quot;) flushSaves();
+    });
+
+    canvas.addEventListener(&quot;click&quot;, function () {
+      try { canvas.focus(); } catch (error) {}
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</foreignObject>
+</svg>
